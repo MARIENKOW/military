@@ -87,6 +87,10 @@ body{
     display:flex;
     width:auto;
     height:auto;
+    transition: .2s;
+}
+.nav__logo__photo:hover{
+    transform: scale(1.2);
 }
 .nav__logo{
    
@@ -102,10 +106,14 @@ body{
     white-space:nowrap;
     opacity:0.7;
     transition: .2s;
+    position: relative;
 
 }
 .nav__link:hover{
     opacity: 1;
+    color: rgba(255, 187, 0, 0.692);
+    transform: scale(1.03);
+    padding: 0px 0px 7px 0px;
 }
 
 .form{
@@ -304,7 +312,8 @@ body{
     font-size: 20px;
     /* mix-blend-mode:darken; */
     /* opacity: 0.7; */
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 187, 0, 0.692);
+    border-color: rgba(255, 187, 0, 0.692);
     background: rgba(255, 255, 255, 0.2);
 
 }
@@ -353,7 +362,7 @@ body{
 .choise__block:hover{
     background-color: rgb(255, 255, 255);
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.05);
     opacity: 1;
 }
 
@@ -419,6 +428,7 @@ body{
     font-style:italic;
 }
 .btn{
+    display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
     padding: 7px;
@@ -427,13 +437,13 @@ body{
     width: auto;
     transition: .2s;
     margin-left:20px;
+
 }
 .btn:hover{
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.418);
-    border-color: #fff;
-    font-size: 16px;
-    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.262);
+    border-color: rgba(255, 187, 0, 0.692);
+    color:rgba(255, 187, 0, 0.692);
+    transform: scale(1.03);
 }
 .ship{
     width: 100%;

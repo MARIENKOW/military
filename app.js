@@ -7,16 +7,18 @@ $(function () {
   
     checkScroll(scrollPos,introH);
   
-    $(window).on("scroll resize", function () {
+    $(window).on("scroll", function () {
       introH = intro.innerHeight();
       scrollPos = $(this).scrollTop();
   
     checkScroll(scrollPos,introH);
+    console.log(introH,scrollPos);
+
   
   
     });
     function checkScroll(scrollPos,introH){
-    if (scrollPos >= introH) {
+    if (scrollPos > introH || scrollPos === introH) {
         header.addClass("fixed");
       }else {
         header.removeClass("fixed");
@@ -26,7 +28,9 @@ $(function () {
       $("[data-scroll]").on("click",function(event) {
         event.preventDefault();
         let elementID=$(this).data('scroll');
-        let elementOffset = $(elementID).offset().top;
+        let elementOffse = $(elementID).offset().top;
+        let elementOffset = elementOffse +1;
+        console.log(`hhhhhhhh${elementOffset}`);
         nav.removeClass("show");
         $("html,body").animate({
           scrollTop:elementOffset
